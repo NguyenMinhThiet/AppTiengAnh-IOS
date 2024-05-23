@@ -23,6 +23,10 @@ class ExerciseDetailController: UIViewController {
         displayQuestion()
     }
     
+    @IBAction func back(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     // Hàm load các câu hỏi (trong thực tế, bạn sẽ thay thế hàm này bằng việc lấy câu hỏi từ một nguồn dữ liệu như database hoặc file)
     func loadQuestions() {
         // Giả sử các câu hỏi được lưu trong một mảng questions
@@ -38,6 +42,7 @@ class ExerciseDetailController: UIViewController {
     
     // Hàm hiển thị câu hỏi
     func displayQuestion() {
+        resetButtonColors() // Đặt lại màu của các button trước khi hiển thị câu hỏi mới
         let question = questions[currentQuestionIndex]
         questionLabel.text = question.text
         answerButtonA.setTitle(question.answers[0], for: .normal)
@@ -86,7 +91,6 @@ class ExerciseDetailController: UIViewController {
                 self.currentQuestionIndex = 0
                 self.correctAnswers = 0
                 self.displayQuestion()
-                self.resetButtonColors() // Đặt lại màu của các button
             }))
             alert.addAction(UIAlertAction(title: "Dừng lại", style: .cancel, handler: nil))
             present(alert, animated: true, completion: nil)
@@ -98,12 +102,13 @@ class ExerciseDetailController: UIViewController {
         }
     }
     
-    // Hàm đặt lại màu của các button về màu mặc định
+    // Hàm đặt lại màu của các button về màu trắng
     func resetButtonColors() {
-        answerButtonA.backgroundColor = nil
-        answerButtonB.backgroundColor = nil
-        answerButtonC.backgroundColor = nil
-        answerButtonD.backgroundColor = nil
+        answerButtonA.backgroundColor = UIColor.white
+        answerButtonB.backgroundColor = UIColor.white
+        answerButtonC.backgroundColor = UIColor.white
+        answerButtonD.backgroundColor = UIColor.white
+        scoreLabel.textColor = UIColor.black
     }
     
     // Sự kiện khi người dùng chọn câu trả lời A

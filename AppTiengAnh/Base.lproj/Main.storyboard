@@ -16,9 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="M5N-mA-59o">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Vocabulary" id="GaD-UX-ygI"/>
+                            </items>
+                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VocabularyCell" rowHeight="100" id="f0j-VI-LKb" customClass="VocabularyTableViewCell" customModule="AppTiengAnh" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                <rect key="frame" x="0.0" y="94" width="393" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f0j-VI-LKb" id="ZfE-c7-d3h">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
@@ -79,9 +86,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="eRG-h8-S85">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Grammar" id="4ln-8f-sh1"/>
+                            </items>
+                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GrammarCell" rowHeight="100" id="YA8-PC-pPY" customClass="GrammarTableViewCell" customModule="AppTiengAnh" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                <rect key="frame" x="0.0" y="94" width="393" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YA8-PC-pPY" id="Vva-fG-tAY">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
@@ -139,12 +153,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1MM-4n-z4k">
-                                <rect key="frame" x="0.0" y="42" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1MM-4n-z4k">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="MRy-QD-Wgd"/>
+                                    <constraint firstAttribute="width" constant="393" id="kcU-HS-8Yz"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Title" id="UyF-03-tlD">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="backward.end.circle.fill" catalog="system" id="ih2-mB-exb">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="ih2-mB-exb">
                                             <connections>
                                                 <action selector="back:" destination="qYq-9X-UU2" id="wf1-ga-IOi"/>
                                             </connections>
@@ -155,6 +172,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pvb-4F-cxc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1MM-4n-z4k" firstAttribute="leading" secondItem="pvb-4F-cxc" secondAttribute="leading" id="1Xw-ge-sym"/>
+                            <constraint firstItem="1MM-4n-z4k" firstAttribute="top" secondItem="pvb-4F-cxc" secondAttribute="top" id="al9-1M-XLd"/>
+                            <constraint firstItem="1MM-4n-z4k" firstAttribute="trailing" secondItem="pvb-4F-cxc" secondAttribute="trailing" id="g3h-ES-gf3"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dCX-LO-6Qy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -169,12 +191,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a66-kf-lBW">
-                                <rect key="frame" x="0.0" y="38" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a66-kf-lBW">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="393" id="r4L-sD-wWJ"/>
+                                    <constraint firstAttribute="height" constant="70" id="r5S-hb-Ctj"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Title" id="Okj-8T-cvc">
-                                        <barButtonItem key="leftBarButtonItem" image="backward.end.circle.fill" catalog="system" id="n30-be-EkR">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="n30-be-EkR">
                                             <connections>
                                                 <action selector="back:" destination="nxx-BG-VBr" id="udu-hs-AaZ"/>
                                             </connections>
@@ -251,6 +276,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mxC-91-LyF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a66-kf-lBW" firstAttribute="top" secondItem="mxC-91-LyF" secondAttribute="top" id="41h-LR-AWD"/>
+                            <constraint firstItem="a66-kf-lBW" firstAttribute="trailing" secondItem="mxC-91-LyF" secondAttribute="trailing" id="O6f-vf-QhG"/>
+                            <constraint firstItem="a66-kf-lBW" firstAttribute="leading" secondItem="mxC-91-LyF" secondAttribute="leading" id="dhk-tp-EXn"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="backLabel" destination="5ax-Lm-kdr" id="kc2-YI-Snu"/>
@@ -274,9 +304,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="4UK-pF-APk">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Exercise" id="YG5-2U-fnB"/>
+                            </items>
+                        </navigationBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExerciseCell" rowHeight="100" id="dOW-HV-Rou" customClass="ExerciseTableViewCell" customModule="AppTiengAnh" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                <rect key="frame" x="0.0" y="94" width="393" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dOW-HV-Rou" id="4K6-oa-x8h">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
@@ -498,7 +535,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backward.end.circle.fill" catalog="system" width="128" height="123"/>
         <image name="bg" width="834" height="1252"/>
         <image name="book.pages.fill" catalog="system" width="107" height="128"/>
         <image name="graduationcap.fill" catalog="system" width="128" height="108"/>
